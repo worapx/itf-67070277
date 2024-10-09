@@ -20,6 +20,7 @@ img{
     height: auto;
 }
 .nav-item-container{
+    margin: 2px;
     display: flex;
     column-gap: 20px;
     color: whitesmoke;
@@ -31,41 +32,80 @@ button{
     border: none;
     color: black;
     font-family: monospace;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
-.footer{
-    background-image: url('nova.jpg');
-    background-size: 100%;
-    padding: 100px 100px;
-    column-gap: 40px;
+.footerbar{
+    margin-top: 17%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: steelblue;
+    padding: 10px 20px;
+    column-gap: 15px;
+    justify-content: space-between;
+}
+.footer-head{
+    margin-top: 5px;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+.footer-item-container{
+    margin: 5px;
+    display: flex;
+    column-gap: 20px;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+a{
+    color: whitesmoke;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    columns: 15px;
+    justify-content: space-between;
 }
 
 .space{
-    margin: 20px;
+    margin: 100px;
 }
 
-.footer-head{
-    font-size: 2rem;
+.content-head{
+    margin: 30px;
+    font-size: 3rem;
     font-family: fantasy;
     color: white;
 }
-.footer-detail{
+
+.content-detail{
+    margin: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     font-size: 1rem;
     row-gap: 15px;
 }
 
-.space{
+.space1{
+    margin: 20px;
+}
+
+body q{
+    font-family: monospace;
+    color: white;
+    font-size: 1rem;
+}
+
+.space2{
     margin: 10px;
 }
 
-.footer-question1{
-    font-family: monospace;
-    color: white;
-    font-size: 0.90rem;
-}
 .yesorno{
+    margin: 30px;
     font-family: Courier;
+}
+
+body{
+    background-image: url(nova.jpg);
+    background-size: cover;
 }
