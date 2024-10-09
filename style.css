@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: steelblue;
+    padding: 10px 20px;
+    column-gap: 15px;
+    justify-content: space-between;
+}
+.nav-item{
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+img{
+    width: 5%;
+    height: auto;
+}
+.nav-item-container{
+    margin: 2px;
+    display: flex;
+    column-gap: 20px;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+button{
+    background-color: paleturquoise;
+    border: none;
+    color: black;
+    font-family: monospace;
+    border-radius: 2px;
+}
+
+.footerbar{
+    margin-top: 17%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: steelblue;
+    padding: 10px 20px;
+    column-gap: 15px;
+    justify-content: space-between;
+}
+.footer-head{
+    margin-top: 5px;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+.footer-item-container{
+    margin: 5px;
+    display: flex;
+    column-gap: 20px;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+a{
+    color: whitesmoke;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    columns: 15px;
+    justify-content: space-between;
+}
+
+.space{
+    margin: 100px;
+}
+
+.content-head{
+    margin: 30px;
+    font-size: 3rem;
+    font-family: fantasy;
+    color: white;
+}
+
+.content-detail{
+    margin: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 1rem;
+    row-gap: 15px;
+}
+
+.space1{
+    margin: 20px;
+}
+
+body q{
+    font-family: monospace;
+    color: white;
+    font-size: 1rem;
+}
+
+.space2{
+    margin: 10px;
+}
+
+.yesorno{
+    margin: 30px;
+    font-family: Courier;
+}
+
+body{
+    background-image: url(nova.jpg);
+    background-size: cover;
+}
