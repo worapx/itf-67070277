@@ -1,0 +1,140 @@
+body {
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: lightblue;
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    background-image: url("https://i.pinimg.com/564x/99/20/6d/99206de3a60112cf83f2be7f638343dc.jpg");
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.notify {
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+label{
+    margin-top: 15px
+}
+
+.username {
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.username:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.add_lst{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.table-title{
+    text-align: center;
+}
+
+.set-addlst{
+    display: flex;
+    padding: 20px;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.setname{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.setprofile{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: center;
+    padding: 20px;
+}
+
+input, button {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.footerbar{
+    margin-top: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: steelblue;
+    padding: 10px 20px;
+    column-gap: 15px;
+    justify-content: space-between;
+}
+.footer-head{
+    margin-top: 5px;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+.footer-item-container{
+    margin: 5px;
+    display: flex;
+    column-gap: 20px;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 1rem;
+}
+a{
+    color: whitesmoke;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    columns: 15px;
+    justify-content: space-between;
+}

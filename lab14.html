@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITF-LAB14</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>
+        <span class="username" id="username">Worapa</span>' Phone Book
+    </h1>
+    <div class="profile" id="profile">
+        <div class="notify">
+            <p>1</p>
+        </div>
+    </div>
+
+    <div class="setname">
+        <label1>set username</label1>
+        <input id="input-name" type="text">
+        <button onclick="setName()">SET</button>
+    </div>
+
+    <div class="setprofile">
+        <label1>set profile</label1>
+        <input id="input-url" type="text">
+        <button onclick="setImg()">SET</button>
+    </div>
+
+    <div class="table_title">
+        <h2>Phone Number List</h2>
+    </div>
+    <div class="add_lst">
+        <div class="set-addlst">
+        <input type="text" id="cell1">
+        <input type="text" id="cell2">
+        <button onclick="addRow()">ADD</button>
+        <button onclick="saveCSV()">EXPORT</button>
+        </div>
+    </div>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>NO.</th>
+                <th>NAME</th>
+                <th>PHONE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added here -->
+        </tbody>
+    </table>
+    
+    <footer class="footerbar">
+        <div class="footer-head">
+            <a href="index.html">BACK</a>
+        </div>
+
+        <div class="footer-item-container">
+            <a href="https://www.instagram.com/bt_wrp/">instagram</a>
+            <a href="https://github.com/worapx">github</a>
+            <a href="https://www.facebook.com/bitoey.worapa/">facebook</a>
+        </div>
+    </footer>
+
+    <script>
+        const name = document.getElementById("username");
+        const inputName = document.getElementById("input-name");
+        const profile = document.getElementById("profile");
+        const inputUrl = document.getElementById("input-url");
+        const table = document.getElementById("table");
+        let count = 0;
+        let contacts = []; // Initialize the contacts array
+
+        function setName() {
+            name.textContent = inputName.value;
+            inputName.value = "";
+        }
+
+        function setImg() {
+            profile.style.backgroundImage = "url(" + inputUrl.value + ")";
+        }
+
+        function addRow() {
+            const nameInput = document.getElementById('cell1').value; // Correctly reference input for name
+            const phoneInput = document.getElementById('cell2').value; // Correctly reference input for phone
+            if (nameInput && phoneInput) { // Check if inputs are not empty
+                contacts.push({ name: nameInput, phone: phoneInput });
+                updateTable(); // Call updateTable to refresh the display
+                document.getElementById('cell1').value = ""; // Clear the input fields
+                document.getElementById('cell2').value = ""; // Clear the input fields
+            } else {
+                alert("Please enter both name and phone number."); // Alert if inputs are empty
+            }
+        }
+
+        function updateTable() {
+            const tbody = table.querySelector('tbody'); // Get the tbody element
+            // Clear the existing rows except for the header
+            while (tbody.rows.length > 0) {
+                tbody.deleteRow(0);
+            }
+            // Populate the table with contacts
+            contacts.forEach((contact, index) => {
+                const row = tbody.insertRow();
+                row.insertCell(0).textContent = index + 1;
+                row.insertCell(1).textContent = contact.name;
+                row.insertCell(2).textContent = contact.phone;
+            });
+        }
+
+        function saveCSV() {
+            const csvContent = contacts.map(contact => [contact.name, contact.phone].join(",")).join("\n"); // Correctly format the CSV
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", "data.csv");
+            link.style.visibility = "hidden";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.getElementById('username').addEventListener('click', function() {
+            window.location.href = "https://www.instagram.com/bt_wrp/";
+        });
+    </script>
+</body>
+</html>
