@@ -36,7 +36,7 @@ button{
 }
 
 .footerbar{
-    margin-top: 17%;
+    margin-top: 20%;
     display: flex;
     flex-wrap: wrap;
     background-color: steelblue;
@@ -68,7 +68,7 @@ a{
 }
 
 .space{
-    margin: 100px;
+    margin: 150px;
 }
 
 .content-head{
